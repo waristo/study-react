@@ -1,8 +1,15 @@
-import React from "react";
-import EventPractice from "./EventPractice";
+import React , {Component} from "react";
+import ScrollBox from "./ScrollBox";
 
-const App = () => {
-  return <EventPractice />
+class App extends Component {
+  render(){
+    return (
+      <div>
+        <ScrollBox ref={(ref)=> this.scrollBox=ref} />
+        <button onClick={() => this.scrollBox.scrollToBottom()}>BLAH BLAH</button>
+      </div>
+    )
+  }
 };
 
 export default App;
